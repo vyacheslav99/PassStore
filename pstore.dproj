@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{d04f9022-0820-4d15-a967-74be6ce9fc38}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>pstore.exe</DCC_DependencyCheckOutputName>
+    <MainSource>pstore.dpr</MainSource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_UnitSearchPath>src</DCC_UnitSearchPath>
+    <DCC_ResourcePath>src</DCC_ResourcePath>
+    <DCC_ObjPath>src</DCC_ObjPath>
+    <DCC_IncludePath>src</DCC_IncludePath>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">2</VersionInfo><VersionInfo Name="MinorVer">1</VersionInfo><VersionInfo Name="Release">2</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1049</VersionInfo><VersionInfo Name="CodePage">1251</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">ViSla</VersionInfoKeys><VersionInfoKeys Name="FileDescription">Таблетка от склероза</VersionInfoKeys><VersionInfoKeys Name="FileVersion">2.1.2.0</VersionInfoKeys><VersionInfoKeys Name="InternalName">Pass Store</VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename">pstore.exe</VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">2.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments">Хранилище паролей хорошо помогает тем, у кого плохо с памятью</VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">pstore.dpr</Source></Source></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="pstore.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="src\AES.pas" />
+    <DCCReference Include="src\ask.pas">
+      <Form>FAsk</Form>
+    </DCCReference>
+    <DCCReference Include="src\card.pas">
+      <Form>FCard</Form>
+    </DCCReference>
+    <DCCReference Include="src\connectdlg.pas">
+      <Form>FConnectDlg</Form>
+    </DCCReference>
+    <DCCReference Include="src\CryptUtils.pas" />
+    <DCCReference Include="src\csvopen.pas">
+      <Form>FOpenCSV</Form>
+    </DCCReference>
+    <DCCReference Include="src\DES.pas" />
+    <DCCReference Include="src\filter.pas">
+      <Form>fFilter</Form>
+    </DCCReference>
+    <DCCReference Include="src\find.pas">
+      <Form>frmFind</Form>
+    </DCCReference>
+    <DCCReference Include="src\findResult.pas">
+      <Form>FFindResult</Form>
+    </DCCReference>
+    <DCCReference Include="src\gridsettings.pas">
+      <Form>FGridSettings</Form>
+    </DCCReference>
+    <DCCReference Include="src\groupedit.pas">
+      <Form>FGroupEdit</Form>
+    </DCCReference>
+    <DCCReference Include="src\import.pas">
+      <Form>FImportParams</Form>
+    </DCCReference>
+    <DCCReference Include="src\inputpass.pas">
+      <Form>FInputPass</Form>
+    </DCCReference>
+    <DCCReference Include="src\main.pas">
+      <Form>FMain</Form>
+    </DCCReference>
+    <DCCReference Include="src\MD5.pas" />
+    <DCCReference Include="src\params.pas">
+      <Form>FParams</Form>
+    </DCCReference>
+    <DCCReference Include="src\RC6.pas" />
+    <DCCReference Include="src\utils.pas" />
+  </ItemGroup>
+</Project>
